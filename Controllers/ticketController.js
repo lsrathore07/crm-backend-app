@@ -80,7 +80,7 @@ exports.updateTicketById = async (req,res)=>{
     
     const ticketId = req.params.id;
     const userId = req.userId;
-
+     console.log(userId)
     const savedTicket = await Ticket.findOne({_id:ticketId});
     const savedUser = await User.findOne({userId:userId});
 
